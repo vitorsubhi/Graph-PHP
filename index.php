@@ -12,6 +12,7 @@
         echo json_encode(['error' => $e->getMessage()]);
     }
 ?>
+
 <html>
     <head>
         <title>Graph Visualization</title>
