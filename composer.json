@@ -1,0 +1,18 @@
+{
+    "name": "vitorsubhi/graph_php",
+    "type": "library",
+    "description": "",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vitor Almeida Subhi",
+            "email": "vitorsubhi@gmail.com"
+        }
+    ],
+    "require": {}
+}
