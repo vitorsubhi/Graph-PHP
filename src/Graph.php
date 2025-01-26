@@ -104,7 +104,8 @@ class Graph {
 		$i = 0;
 		foreach ($this->vertexSet as $vertex) {
 			$name = $vertex->getID();
-			$nodes .= '{"name": "'.$name.'"}, ';
+			$color = $vertex->getColor();
+			$nodes .= '{"name": "'.$name.'", "color": "'.$color.'"}, ';
 			$map[$name] = $i;
 			$i++;
 		}

@@ -1,5 +1,5 @@
 const width = window.innerWidth;
-const height = window.innerHeight * 0.75;
+const height = window.innerHeight;
 
 const svg = d3.select("svg")
     .attr("width", width)
@@ -7,8 +7,8 @@ const svg = d3.select("svg")
 
 const simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(links).id(d => d.name))
-    .force("charge", d3.forceManyBody().strength(-200))
-    .force("center", d3.forceCenter(width / 2, height / 2));
+    .force("charge", d3.forceManyBody().strength(-300))
+    .force("center", d3.forceCenter(width / 2, height / 2))
 
 const link = svg.append("g")
     .attr("stroke", "#000")
@@ -23,7 +23,7 @@ const node = svg.append("g")
     .data(nodes)
     .enter().append("circle")
     .attr("r", 10)
-    .attr("fill", "steelblue")
+    .attr("fill", d => d.color)
     .call(d3.drag()
         .on("start", dragstarted)
         .on("drag", dragged)
@@ -45,7 +45,7 @@ simulation.on("tick", () => {
 });
 
 function dragstarted(event, d) {
-    if (!event.active) simulation.alphaTarget(0.3).restart();
+    if (!event.active) simulation.alphaTarget(0.5).restart();
     d.fx = d.x;
     d.fy = d.y;
 }

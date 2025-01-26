@@ -1,6 +1,7 @@
 <?php
 namespace App\Factory;
 use App\Graph;
+use InvalidArgumentException;
 
 class TreeGraph extends Graph {
     public function __construct($n) {

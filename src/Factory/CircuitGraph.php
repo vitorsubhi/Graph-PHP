@@ -1,6 +1,7 @@
 <?php 
 namespace App\Factory;
 use App\Factory\Path;
+use InvalidArgumentException;
 
 class CircuitGraph extends PathGraph {
     public function __construct($n) {
