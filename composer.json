@@ -14,5 +14,7 @@
             "email": "vitorsubhi@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpmd/phpmd": "^2.15"
+    }
 }

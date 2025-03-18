@@ -2,20 +2,20 @@
 namespace App;
 
 class Vertex {
-    private $id;
+    private $vertexId;
     private $color;
 
-    public function __construct($id, $color = "#0dd") {
-        $this->id = $id;
+    public function __construct($vertexId, $color = "#0dd") {
+        $this->vertexId = $vertexId;
         $this->color = $color;
     }
 
     public function getId(){
-        return $this->id;
+        return $this->vertexId;
     }
 
-    public function setId($id){
-        $thid->id = $id;
+    public function setId($vertexId){
+        $this->vertexId = $vertexId;
     }
 
     public function getColor() {

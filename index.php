@@ -10,7 +10,7 @@
     $error = "Internal Server Error";
     try {
         $graph = GraphFactory::createGraph($graphType, $numVertices, $numPartitions);
-        $data = $graph->d3();
+        $data = $graph->draw();
     } catch (Exception $e) {
         $error = "Error: ". $e->getMessage();
     }

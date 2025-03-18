@@ -99,15 +99,17 @@ class Graph {
 		echo $output;
 	}
 
-	public function d3() {
+	public function draw() {
 		$nodes = '[ ';
-		$i = 0;
+		$map = [];
+		$data = [];
+		$index = 0;
 		foreach ($this->vertexSet as $vertex) {
 			$name = $vertex->getID();
 			$color = $vertex->getColor();
 			$nodes .= '{"name": "'.$name.'", "color": "'.$color.'"}, ';
-			$map[$name] = $i;
-			$i++;
+			$map[$name] = $index;
+			$index++;
 		}
 		$nodes = substr($nodes, 0, -2);
 		$nodes .= " ]";
